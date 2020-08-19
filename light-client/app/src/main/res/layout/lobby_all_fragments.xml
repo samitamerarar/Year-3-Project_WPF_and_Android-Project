@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <include android:id="@+id/fragment_lobby_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment"/>
+
+    <include android:id="@+id/fragment_groups_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment_groups"/>
+
+    <include android:id="@+id/fragment_classic_mode_lobby_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment_classic"/>
+
+    <include android:id="@+id/fragment_solo_mode_lobby_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment_solo"/>
+
+    <include android:id="@+id/fragment_coop_mode_lobby_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment_coop"/>
+
+    <include android:id="@+id/fragment_tournament_mode_lobby_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment_tournament"/>
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+﻿<Window x:Class="Prototype_Heacy_client.Views.Tutorial_popupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Heacy_client.Views"
+        mc:Ignorable="d"
+        Title="Tutorial_popupWindow" Height="400" Width="500"  AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" WindowStartupLocation="CenterScreen">
+   
+
+        <Grid>
+
+        <Border BorderThickness="1" Background="LightCyan" CornerRadius="0 20 0 20" Grid.RowSpan="4" BorderBrush="#33000000" >
+            
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.3" BlurRadius="15"/>
+
+            </Border.Effect>
+        </Border>
+        <Border HorizontalAlignment="Center"   Background="{StaticResource PrimaryHueDarkBrush}" VerticalAlignment="Center" CornerRadius="0 20 0 20"   Margin="10 12">
+                <TextBox AcceptsReturn="True" IsReadOnly="True"  x:Name="Mytext" MaxWidth="400" FontSize="16" FontWeight="Bold" Margin="15"  TextWrapping="Wrap"  Foreground="White"/>
+            </Border>
+
+            <Button Margin="20" Click="Button_Click" Name="button" HorizontalAlignment="Right" VerticalAlignment="Bottom"  Background="{StaticResource PrimaryHueDarkBrush}" />
+
+        </Grid>
+
+
+</Window>

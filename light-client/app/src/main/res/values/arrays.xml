@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="group_images">
+        <item>@drawable/img_purple_01</item>
+        <item>@drawable/img_purple_02</item>
+        <item>@drawable/img_purple_03</item>
+        <item>@drawable/img_purple_04</item>
+        <item>@drawable/img_purple_05</item>
+        <item>@drawable/img_purple_06</item>
+        <item>@drawable/img_purple_07</item>
+        <item>@drawable/img_purple_08</item>
+        <item>@drawable/img_purple_09</item>
+        <item>@drawable/img_purple_10</item>
+    </array>
+
+    <string-array name="blue_purple">
+        <item>#ADE5FE</item>
+        <item>#4140C0</item>
+        <item>#3E67BE</item>
+        <item>#00AAFF</item>
+    </string-array>
+
+    <string-array name="path">
+        <item>com.github.glomadrian.grav.generator.animation.PathAnimator</item>
+        <item>com.github.glomadrian.grav.generator.animation.BallSizeAnimator</item>
+    </string-array>
+</resources>

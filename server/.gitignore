@@ -1,0 +1,17 @@
+node_modules/*
+npm-debug.log
+.tscache
+.sublime-grunt-cache
+*.tmp.txt
+*.cache
+dist
+typings
+bin
+deploy.sh
+!images/.gitkeep
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

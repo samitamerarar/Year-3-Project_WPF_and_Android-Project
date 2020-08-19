@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingLeft="20dp"
+                android:text="Groupes disponibles"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_group_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.00005"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="#ffffff"
+                app:iconPadding="0dp"
+                app:iconGravity="textStart"
+                app:icon="@drawable/ic_arrow_back_white_24dp" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:text="Selectionner ou créer un groupe"
+                tools:targetApi="o" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            style="@style/Widget.MaterialComponents.CardView"
+            android:id="@+id/fragment_create_group"
+            android:layout_width="match_parent"
+            android:layout_height="137.5dp"
+            android:minHeight="50dp"
+            android:layout_gravity="center"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#ffffff"
+            tools:targetApi="lollipop"
+            android:layout_margin="4dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/fragment_create_group_image_view"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="casual"
+                android:text="Créer un Groupe"
+                android:textSize="50sp" />
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:background="@color/colorPrimary" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_groups_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

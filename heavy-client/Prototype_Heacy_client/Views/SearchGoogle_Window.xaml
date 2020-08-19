@@ -1,0 +1,49 @@
+﻿<Window x:Class="Prototype_Heacy_client.Views.SearchGoogle_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Heacy_client.Views.UserControls"
+        mc:Ignorable="d"
+                WindowStartupLocation="CenterScreen"
+
+        Title="SearchGoogle_Window" Height="900" Width="800">
+
+    <Grid Background="Gray" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Border  Grid.Row="0" BorderBrush="LightGray" Margin="10" BorderThickness="1">
+            <Grid  Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Margin="10,0" Grid.Column="0" Name="Search"   Style="{StaticResource MaterialDesignFloatingHintTextBox}" Foreground="White" FontFamily="Champagne &amp; Limousines" FontSize="16"/>
+                <Button Grid.Column="1" Margin="5" Content="Chercher" Click="Button_Click" Foreground="White"/>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1">
+            <ScrollViewer x:Name="ScrollView" HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="2"  >
+                <StackPanel Name="Images"   Margin="10">
+
+
+
+
+                </StackPanel>
+
+            </ScrollViewer>
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Margin="0,5,5,5" Orientation="Horizontal" HorizontalAlignment="Right" Width="277">
+                <Button Margin="5" FontSize="16" Width="130" Content="Fermer" Click="Close_Click" Name="close" Background="Red" BorderBrush="Red" Foreground="White"/>
+
+                <Button Width="130" Margin="5" FontSize="16" Content="Sauvegarder" Click="Save_Click" Name="save"  Foreground="White"/>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>

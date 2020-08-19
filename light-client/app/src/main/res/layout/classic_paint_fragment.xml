@@ -1,0 +1,243 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#adbce6">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti_paint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/paint_title_dessinateur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="-2dp"
+                android:layout_marginBottom="-1dp"
+                android:background="@drawable/border_text_view_paint"
+                android:fontFamily="@font/nothing_you_could_do"
+                android:gravity="end"
+                android:text="DESSINATEUR"
+                android:textAlignment="center"
+                android:textColor="#454545"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints,RtlCompat" />
+
+            <TextView
+                android:id="@+id/paint_skip_tutorial"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="Terminer tutoriel"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="320dp"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center"
+            android:background="#454545"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/score_paint_my_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Score: 1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/score_paint_other_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:text="Score adversaire: 1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/current_round_paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                android:text="Manche: 1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/attempts_paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Essais restants: 5"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/is_counter_paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Droit de Riposte!"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="@color/materialcolorpicker__red"/>
+
+            <TextView
+                android:id="@+id/timer_paint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:text="Temps: 60"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/word_to_guess_paint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:text="Mot à Deviner"
+            android:textColor="@color/colorPrimary"
+            android:gravity="end"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/paint_tutorial_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.light_client.lib.CanvasView
+                android:id="@+id/canvas"
+                android:layout_width="800px"
+                android:layout_height="750px"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/draw_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/canvas">
+
+                <ImageView
+                    android:id="@+id/image_draw_pen_circle"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="7dp"
+                    app:layout_constraintEnd_toStartOf="@id/image_draw_pen_square"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pen_circle"
+                    tools:ignore="UnusedAttribute" />
+
+                <ImageView
+                    android:id="@+id/image_draw_pen_square"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="8dp"
+                    app:layout_constraintEnd_toStartOf="@id/image_eraser_draw"
+                    app:layout_constraintStart_toEndOf="@id/image_draw_pen_circle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_pen_square"
+                    tools:ignore="UnusedAttribute" />
+
+                <ImageView
+                    android:id="@+id/image_eraser_draw"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toStartOf="@id/image_eraser_segment"
+                    app:layout_constraintStart_toEndOf="@id/image_draw_pen_square"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_eraser"
+                    tools:ignore="UnusedAttribute" />
+
+                <ImageView
+                    android:id="@+id/image_eraser_segment"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="15dp"
+                    app:layout_constraintEnd_toStartOf="@id/image_color_picker"
+                    app:layout_constraintStart_toEndOf="@id/image_eraser_draw"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_eraser_segment"
+                    tools:ignore="UnusedAttribute" />
+
+                <ImageView
+                    android:id="@+id/image_color_picker"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_eraser_segment"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_color_lens_black_24dp"
+                    tools:ignore="UnusedAttribute" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_width"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:max="100"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:progress="10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image_draw_pen_circle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

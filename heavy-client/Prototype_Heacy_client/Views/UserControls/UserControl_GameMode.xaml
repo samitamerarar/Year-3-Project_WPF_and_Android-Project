@@ -1,0 +1,81 @@
+﻿<UserControl x:Class="Prototype_Heacy_client.Views.UserControls.UserControl_GameMode"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prototype_Heacy_client.Views.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Mode De Jeu" Foreground="#FF3580BF" FontSize="34" FontWeight="Bold" Margin="5 5 5 5" Grid.Row="0"/>
+
+        <Grid Margin="5" Grid.Row="1" Grid.Column="0">
+            <!--<Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FF4B6C86" />
+            </Grid.Effect>-->
+            <Button Command="{Binding ChooseGameMode }" CommandParameter="CLASSIC" Style="{StaticResource ReadyButton}" Foreground="White" FontWeight="Bold" Content="CLASSIQUE" FontSize="28" Height="Auto" Width="Auto" BorderBrush="#FF2B7EBF" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFA336AD" Offset="0"/>
+                        <GradientStop Color="#FF4688BC" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Margin="5" Grid.Row="1" Grid.Column="1">
+            <!--<Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FF4B6C86" ShadowDepth="1"/>
+            </Grid.Effect>-->
+            <Button Command="{Binding ChooseGameMode}" CommandParameter="COOP" Content="COOP" Style="{StaticResource ReadyButton}" Foreground="White" FontWeight="Bold" FontSize="28" Height="Auto" Width="Auto" BorderBrush="#FF2B7EBF">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFBCCB46" Offset="0"/>
+                        <GradientStop Color="#FF4688BC" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Margin="5" Grid.Row="1" Grid.Column="2">
+            <!--<Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FF4B6C86" ShadowDepth="1"/>
+            </Grid.Effect>-->
+            <Button Command="{Binding ChooseGameMode}" CommandParameter="SOLO" Content="SOLO" Style="{StaticResource ReadyButton}" Foreground="White" FontWeight="Bold" FontSize="28" Height="Auto" Width="Auto" BorderBrush="#FF2B7EBF">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFD93535" Offset="0"/>
+                        <GradientStop Color="#FF4688BC" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+        <Grid Margin="5" Grid.Row="2" Grid.Column="0">
+            <!--<Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FF4B6C86" ShadowDepth="1"/>
+            </Grid.Effect>-->
+            <Button Command="{Binding ChooseGameMode}" CommandParameter="TOURNAMENT" Content="Tournoi" Style="{StaticResource ReadyButton}" Foreground="White" FontWeight="Bold" FontSize="28" Height="Auto" Width="Auto" BorderBrush="#FF2B7EBF">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF1AD44B" Offset="0"/>
+                        <GradientStop Color="#FF4688BC" Offset="1.2"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+    
+
+</UserControl>

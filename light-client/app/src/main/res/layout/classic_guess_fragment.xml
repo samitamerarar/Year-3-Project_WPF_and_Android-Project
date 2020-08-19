@@ -1,0 +1,209 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#ade6d7">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti_guess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/guess_title_devineur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/border_text_view_guess"
+            android:fontFamily="@font/nothing_you_could_do"
+            android:gravity="end"
+            android:text="DEVINEUR"
+            android:textAlignment="center"
+            android:textColor="#454545"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints,RtlCompat" />
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="0.5dp"
+            android:layout_gravity="center"
+            android:background="#454545"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/score_guess_my_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Score: 1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/score_guess_other_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:text="Score adversaire: 1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/current_round_guess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                android:text="Manche: 1"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/attempts_guess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Essais restants: 5"
+                android:textColor="#d88c00"
+                android:layout_centerHorizontal="true"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/is_counter_guess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Droit de Riposte!"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:textColor="@color/materialcolorpicker__red"/>
+
+            <TextView
+                android:id="@+id/timer_guess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:text="Temps: 60"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.otaliastudios.zoom.ZoomLayout
+                android:id="@+id/zoom_layout_guess"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical|horizontal"
+                app:transformation="centerInside"
+                app:transformationGravity="auto"
+                app:alignment="center"
+                app:overScrollHorizontal="true"
+                app:overScrollVertical="true"
+                app:overPinchable="true"
+                app:horizontalPanEnabled="true"
+                app:verticalPanEnabled="true"
+                app:zoomEnabled="true"
+                app:flingEnabled="true"
+                app:scrollEnabled="true"
+                app:oneFingerScrollEnabled="true"
+                app:twoFingersScrollEnabled="true"
+                app:threeFingersScrollEnabled="true"
+                app:minZoom="0.7"
+                app:minZoomType="zoom"
+                app:maxZoom="2.5"
+                app:maxZoomType="zoom"
+                app:animationDuration="280"
+                app:hasClickableChildren="false">
+
+                <com.example.light_client.ui.game.ProgressiveDraw
+                    android:id="@+id/progressive_draw_guess"
+                    android:layout_width="800px"
+                    android:layout_height="750px"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="#ffffff"
+                    tools:ignore="PxUsage" />
+            </com.otaliastudios.zoom.ZoomLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:hint="Mot ou expression">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/word_guessed_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:maxLines="1"
+                    android:maxLength="15"
+                    android:drawableStart="@drawable/ic_question_green_50dp"
+                    android:drawablePadding="20dp"
+                    android:textSize="20sp"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:imeOptions="actionSend"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/send_guessed_word"
+                android:layout_height="60dp"
+                android:layout_width="wrap_content"
+                android:text="DEVINER"
+                android:layout_marginEnd="15dp"
+                android:textColor="#fff"
+                android:backgroundTint="#41ba42"
+                tools:ignore="UnusedAttribute" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ask_for_clue"
+            android:layout_width="match_parent"
+            android:layout_margin="15dp"
+            android:text="DEMANDER UN INDICE"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#205d20"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Prototype_Heacy_client.Views.UserControls.UserControl_Write"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prototype_Heacy_client.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Name="InfoBar"/>
+
+        <Border Grid.Row="1" Margin="5 5 5 5" BorderBrush="Gray" BorderThickness="1">
+            <Grid Name="DrawingArea">
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <androidx.cardview.widget.CardView
+        style="@style/Widget.MaterialComponents.CardView"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:minHeight="50dp"
+        android:layout_gravity="center"
+        android:elevation="3dp"
+        tools:targetApi="lollipop"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/group_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/img_group_yellow" />
+
+<!--        <TextView
+            android:id="@+id/game_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="RtlHardcoded" />-->
+
+        <TextView
+            android:id="@+id/group_game_mode_title"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thumbnail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="right"
+            android:layout_marginBottom="8dp"
+            android:padding="8dp"
+            android:text="Sprint Coopératif"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/difficulty"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/black_ops_one"
+            android:padding="8dp"
+            android:layout_marginTop="20dp"
+            android:text="Intermédiaire"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/group_name"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/thumbnail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="bottom|center_vertical"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="casual"
+            android:padding="8dp"
+            android:text="Hello! Venez Jouez!!!!!!!!!!"
+            android:textColor="#01ff01"
+            android:textSize="25sp"
+            tools:ignore="RtlHardcoded" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

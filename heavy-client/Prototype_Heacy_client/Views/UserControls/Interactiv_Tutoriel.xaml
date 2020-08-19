@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Prototype_Heacy_client.Views.UserControls.Interactiv_Tutoriel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prototype_Heacy_client.Views.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"  Loaded="UserControl_Loaded">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="55"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Name="tuto" Grid.Column="0" ></Grid>
+
+
+
+            <Grid Name="chat" Grid.Column="1" Margin="0 7 0 5"></Grid>
+
+        </Grid>
+        <Button Grid.Row="1" x:Name="quit" Click="Quit_Click" Margin="10" Content="Terminer tutoriel" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</UserControl>

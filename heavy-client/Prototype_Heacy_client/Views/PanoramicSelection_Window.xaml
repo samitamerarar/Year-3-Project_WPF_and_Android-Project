@@ -1,0 +1,46 @@
+﻿<Window x:Class="Prototype_Heacy_client.Views.PanoramicSelection_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Heacy_client.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="PanoramicSelection_Window" Height="220" Width="800" Background="Gray">
+    <Grid Margin="50">
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
+                <RadioButton  FontSize="16" 
+                          Foreground="White"
+                          FontWeight="Bold"
+                          IsChecked="true"
+                          Checked="Opt1_Checked"
+                          Margin="10 0"
+                          Name="opt1"
+                          Content="Bas vers le haut"></RadioButton>
+                <RadioButton  FontSize="16"
+                          FontWeight="Bold"
+                          Foreground="White"
+                          Checked="Opt2_Checked"
+                          Margin="10 0"
+                          Name="opt2"
+                          Content="Haut vers le bas"></RadioButton>
+                <RadioButton  FontSize="16" 
+                          FontWeight="Bold"
+                          Foreground="White"
+                          Checked="Opt3_Checked"
+                          Name="opt3"
+                          Margin="10 0"
+                          Content="Droit à gauche"></RadioButton>
+                <RadioButton  FontSize="16" 
+                          FontWeight="Bold"
+                          Checked="Opt4_Checked"
+                          Foreground="White"
+                          Name="opt4"
+                          Margin="10 0"
+                          Content="Gauche à droite"></RadioButton>
+            </StackPanel>
+
+            <Button Foreground="White" Margin="0" Background="Green" Content="Soumettre" VerticalAlignment="Bottom" Click="Button_Click" HorizontalAlignment="Right"/>
+
+    </Grid>
+</Window>

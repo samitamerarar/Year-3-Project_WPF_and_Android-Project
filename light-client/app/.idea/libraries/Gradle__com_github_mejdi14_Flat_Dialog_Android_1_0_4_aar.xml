@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.mejdi14:Flat-Dialog-Android:1.0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0b8d25538db6297daad54ac09830769/Flat-Dialog-Android-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0b8d25538db6297daad54ac09830769/Flat-Dialog-Android-1.0.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.mejdi14/Flat-Dialog-Android/1.0.4/caef447650f22bf155a63ed04c3f5bb51393d59/Flat-Dialog-Android-1.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include android:id="@+id/fragment_lobby_parent_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/lobby_fragment"/>
+
+    <include android:id="@+id/fragment_paint_parent_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/classic_paint_fragment"/>
+
+    <include android:id="@+id/fragment_guess_parent_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/classic_guess_fragment"/>
+
+    <include android:id="@+id/fragment_passive_parent_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/classic_passive_fragment"/>
+
+</LinearLayout>

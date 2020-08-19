@@ -1,0 +1,482 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back_lobby_button_tournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00005"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:textColor="#fff"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            app:icon="@drawable/ic_arrow_back_white_24dp"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="Lobby du Mode Tournoi"
+            tools:targetApi="o" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center">
+
+        <TextView
+            android:text="Mode Tournoi"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="36sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.25"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_virtual_player_tournament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:gravity="center"
+            android:text="Joueur Virtuel"
+            app:iconPadding="-30dp"
+            app:cornerRadius="50dp"
+            app:iconSize="50dp"
+            app:iconTint="@null"
+            android:textAllCaps="false"
+            tools:ignore="NestedWeights"
+            android:backgroundTint="@color/colorAccent" />
+
+        <TextView
+            android:text="Dessinateur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.20"
+        android:gravity="center"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_player_tournament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10"
+            android:gravity="center"
+            android:text="JOINDRE LE TOURNOI"
+            app:iconPadding="-30dp"
+            app:cornerRadius="50dp"
+            app:iconSize="50dp"
+            app:iconTint="@null"
+            android:textAllCaps="false"
+            tools:ignore="NestedWeights"
+            android:backgroundTint="@color/colorAccent" />
+
+        <TextView
+            android:text="Devineur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:textAlignment="center"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:text="Autres joueurs dans ce tournoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_01_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_04_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_07_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_10_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_13_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_02_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_05_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_08_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_11_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_14_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_03_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_06_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_09_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_12_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_other_player_15_tournament"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="place disponible"
+                    app:cornerRadius="50dp"
+                    app:iconPadding="-30dp"
+                    app:iconSize="30dp"
+                    app:icon="@drawable/profile_no_image_available"
+                    app:iconTint="@null"
+                    android:enabled="false"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/colorAccent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:paddingBottom="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ready_button_tournament"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Prêt"
+            app:backgroundTint="#4CAF50"
+            app:cornerRadius="100dp"/>
+    </LinearLayout>
+
+</LinearLayout>

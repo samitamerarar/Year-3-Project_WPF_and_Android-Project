@@ -1,0 +1,32 @@
+﻿<Window x:Class="Prototype_Heacy_client.Views.Simulation_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Heacy_client.Views"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Simulation_Window" 
+        Closing="Window_Closing" Height="800" Width="1000">
+    
+    <Grid Background="Gray">
+
+        <DockPanel>
+            <DockPanel.LayoutTransform >
+                <ScaleTransform 
+                     ScaleX="0.9"
+
+
+                      ScaleY="0.9"
+
+/>
+            </DockPanel.LayoutTransform>
+            <InkCanvas Name="InkCanvas" Height="750" Width="800"   IsEnabled="False">
+                <Path x:Name="path"  Stroke="Black" StrokeThickness="3" Fill="Black" />
+            </InkCanvas>
+
+        </DockPanel>
+            
+
+    </Grid>
+</Window>

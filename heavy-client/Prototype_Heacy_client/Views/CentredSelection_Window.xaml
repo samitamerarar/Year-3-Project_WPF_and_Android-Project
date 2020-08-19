@@ -1,0 +1,33 @@
+﻿<Window x:Class="Prototype_Heacy_client.Views.CentredSelection_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Heacy_client.Views"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="CentredSelection_Window" Height="220" Width="800" Background="Gray">
+    <Grid Margin="50">
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center" >
+                <RadioButton  FontSize="16" 
+                          Foreground="White"
+                          FontWeight="Bold"
+                          IsChecked="true"
+                          Checked="Opt1_Checked"
+                          Margin="30 0"
+                          Name="opt1"
+                          Content="Extérieur vers intérieur"></RadioButton>
+                <RadioButton  FontSize="16"
+                          FontWeight="Bold"
+                          Foreground="White"
+                          Checked="Opt2_Checked"
+                          Margin="30 0"
+                          Name="opt2"
+                          Content="Intérieur vers extérieur"></RadioButton>
+            </StackPanel>
+
+            <Button Foreground="White"  VerticalAlignment="Bottom" Background="Green" Content="Soumettre" Click="Button_Click" HorizontalAlignment="Right"/>
+
+
+    </Grid>
+</Window>

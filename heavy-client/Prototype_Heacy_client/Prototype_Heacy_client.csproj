@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF8CC762-0AEF-4691-BE94-E867A4BDBC7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Prototype_Heacy_client</RootNamespace>
+    <AssemblyName>Prototype_Heacy_client</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net47\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EngineIoClientDotNet, Version=0.9.22.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EngineIoClientDotNet.0.9.22\lib\net45\EngineIoClientDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.4.1.0, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.4.1.0, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform, Version=5.4.1.0, Culture=neutral, PublicKeyToken=5f873c45e98af8a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.4.1.1\lib\net45\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.2.0\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.6.0.325, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.6.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketIoClientDotNet, Version=0.9.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SocketIoClientDotNet.0.9.13\lib\net45\SocketIoClientDotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=3.0.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Svg.3.0.49\lib\net472\Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WebSocket4Net, Version=0.14.1.0, Culture=neutral, PublicKeyToken=eb4e154b696bf72a, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebSocket4Net.0.14.1\lib\net45\WebSocket4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.6.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.6.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.6.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.6.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Commands\GeneralCommands.cs" />
+    <Compile Include="Commands\RelayCommand_Drow.cs" />
+    <Compile Include="Convertisseur\Convertisseur.cs" />
+    <Compile Include="Interfaces\GlobalUser.cs" />
+    <Compile Include="Interfaces\GroupInfo_Interfaces.cs" />
+    <Compile Include="Interfaces\Interfaces.cs" />
+    <Compile Include="Models\Channels.cs" />
+    <Compile Include="Models\Chat_Model.cs" />
+    <Compile Include="Models\Editeur.cs" />
+    <Compile Include="Models\User_Model.cs" />
+    <Compile Include="Services\BasicMode.cs" />
+    <Compile Include="Services\Http.cs" />
+    <Compile Include="Services\SocketService.cs" />
+    <Compile Include="Services\VirtualPlayer.cs" />
+    <Compile Include="ViewModels\ChannelCreation_ViewModel.cs" />
+    <Compile Include="ViewModels\Gallery_ViewModel.cs" />
+    <Compile Include="ViewModels\GameDifficulties_ViewModel.cs" />
+    <Compile Include="ViewModels\GroupCreation_ViewModel.cs" />
+    <Compile Include="ViewModels\SerchChannel_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Solo_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Channel_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Chat_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\ConversationsChannel_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Coop_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Drow_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\GameCreationAssistedS1_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\GameCreationAssistedS2_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\GameCreationManual_1_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\GameMode_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\GamesRoom_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Classic_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Group_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Guess_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\HomePage_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\LogIn_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\TemplateView_ViewModel.cs" />
+    <Compile Include="ViewModels\UserControl_ViewMoels\Tournament_ViewModel.cs" />
+    <Compile Include="ViewModels\UserProfil_ViewModel.cs" />
+    <Compile Include="Views\CentredSelection_Window.xaml.cs">
+      <DependentUpon>CentredSelection_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChannelCreationWindow.xaml.cs">
+      <DependentUpon>ChannelCreationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ChatWindow.xaml.cs">
+      <DependentUpon>ChatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Gallery_Window.xaml.cs">
+      <DependentUpon>Gallery_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameCreationAssisted_Window.xaml.cs">
+      <DependentUpon>GameCreationAssisted_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameCreationFeedback_window.xaml.cs">
+      <DependentUpon>GameCreationFeedback_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameCreation_Window.xaml.cs">
+      <DependentUpon>GameCreation_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GameDifficultiesWindow.xaml.cs">
+      <DependentUpon>GameDifficultiesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupCreationWindow.xaml.cs">
+      <DependentUpon>GroupCreationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Loading_Window.xaml.cs">
+      <DependentUpon>Loading_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PanoramicSelection_Window.xaml.cs">
+      <DependentUpon>PanoramicSelection_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchGoogle_Window.xaml.cs">
+      <DependentUpon>SearchGoogle_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SerchChanel_Window.xaml.cs">
+      <DependentUpon>SerchChanel_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simulation_Window.xaml.cs">
+      <DependentUpon>Simulation_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tutorial_popupWindow.xaml.cs">
+      <DependentUpon>Tutorial_popupWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateUserProfilWindow.xaml.cs">
+      <DependentUpon>UpdateUserProfilWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\Interactiv_Tutoriel.xaml.cs">
+      <DependentUpon>Interactiv_Tutoriel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Coop.xaml.cs">
+      <DependentUpon>UserControl_Coop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GameHistory.xaml.cs">
+      <DependentUpon>UserControl_GameHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GameInfoBar.xaml.cs">
+      <DependentUpon>UserControl_GameInfoBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GroupComposition.xaml.cs">
+      <DependentUpon>UserControl_GroupComposition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Guess.xaml.cs">
+      <DependentUpon>UserControl_Guess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_History.xaml.cs">
+      <DependentUpon>UserControl_History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_PlayerTournament.xaml.cs">
+      <DependentUpon>UserControl_PlayerTournament.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Solo.xaml.cs">
+      <DependentUpon>UserControl_Solo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Tournament.xaml.cs">
+      <DependentUpon>UserControl_Tournament.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_TutorialPage1.xaml.cs">
+      <DependentUpon>UserControl_TutorialPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_TutorialPage2.xaml.cs">
+      <DependentUpon>UserControl_TutorialPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_WaitingView.xaml.cs">
+      <DependentUpon>UserControl_WaitingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Write.xaml.cs">
+      <DependentUpon>UserControl_Write.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Channel.xaml.cs">
+      <DependentUpon>UserControl_Channel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Chat.xaml.cs">
+      <DependentUpon>UserControl_Chat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_ChatControl.xaml.cs">
+      <DependentUpon>UserControl_ChatControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Conversations-Channel.xaml.cs">
+      <DependentUpon>UserControl_Conversations-Channel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Drow.xaml.cs">
+      <DependentUpon>UserControl_Drow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GameCreationAssisted.xaml.cs">
+      <DependentUpon>UserControl_GameCreationAssisted.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GameCreationAssisted_step2.xaml.cs">
+      <DependentUpon>UserControl_GameCreationAssisted_step2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GameCreationManual_1.xaml.cs">
+      <DependentUpon>UserControl_GameCreationManual_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GameMode.xaml.cs">
+      <DependentUpon>UserControl_GameMode.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_GamesRoom.xaml.cs">
+      <DependentUpon>UserControl_GamesRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Group.xaml.cs">
+      <DependentUpon>UserControl_Group.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Classic.xaml.cs">
+      <DependentUpon>UserControl_Classic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Hint.xaml.cs">
+      <DependentUpon>UserControl_Hint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_HomePage.xaml.cs">
+      <DependentUpon>UserControl_HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Image.xaml.cs">
+      <DependentUpon>UserControl_Image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_LogIn.xaml.cs">
+      <DependentUpon>UserControl_LogIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_MessageRecieved.xaml.cs">
+      <DependentUpon>UserControl_MessageRecieved.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_MessageSent.xaml.cs">
+      <DependentUpon>UserControl_MessageSent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_Passive.xaml.cs">
+      <DependentUpon>UserControl_Passive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_SerchGoogle.xaml.cs">
+      <DependentUpon>UserControl_SerchGoogle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_UploadImage.xaml.cs">
+      <DependentUpon>UserControl_UploadImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserControls\UserControl_WriteToPassif.xaml.cs">
+      <DependentUpon>UserControl_WriteToPassif.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserInfo_Window.xaml.cs">
+      <DependentUpon>UserInfo_Window.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ressources\crayon.png" />
+    <Resource Include="Ressources\dupliquer.png" />
+    <Resource Include="Ressources\efface.png" />
+    <Resource Include="Ressources\efface_crayon.png" />
+    <Resource Include="Ressources\lasso.png" />
+    <Resource Include="Ressources\position.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\CentredSelection_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChannelCreationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ChatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Gallery_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameCreationAssisted_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameCreationFeedback_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameCreation_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GameDifficultiesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GroupCreationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Loading_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PanoramicSelection_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SearchGoogle_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SerchChanel_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Simulation_Window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Tutorial_popupWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UpdateUserProfilWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\Interactiv_Tutoriel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Coop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GameHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GameInfoBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GroupComposition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Guess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_History.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_PlayerTournament.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Solo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Tournament.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_TutorialPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_TutorialPage2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_WaitingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Write.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Channel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Chat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_ChatControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Conversations-Channel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Drow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GameCreationAssisted.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GameCreationAssisted_step2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GameCreationManual_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GameMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_GamesRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Group.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Classic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Hint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_LogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_MessageRecieved.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_MessageSent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_Passive.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_SerchGoogle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_UploadImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserControls\UserControl_WriteToPassif.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserInfo_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\profile_1.jpg" />
+    <Resource Include="Assets\profile_2.jpg" />
+    <Resource Include="Assets\profile_3.jpg" />
+    <Resource Include="Assets\profile_4.jpg" />
+    <Resource Include="Assets\profile_5.jpg" />
+    <Resource Include="Assets\profile_6.jpg" />
+    <Resource Include="Assets\profile_7.jpg" />
+    <Resource Include="Assets\profile_8.jpg" />
+    <Resource Include="Assets\profile_collection.jpg" />
+    <Resource Include="Assets\profile_virtual_player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\profilePic.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

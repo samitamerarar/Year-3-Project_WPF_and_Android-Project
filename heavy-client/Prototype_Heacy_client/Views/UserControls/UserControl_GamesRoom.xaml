@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Prototype_Heacy_client.Views.UserControls.UserControl_GamesRoom"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Prototype_Heacy_client.Views.UserControls"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+   
+
+    <Grid Margin="0 0 0 0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <!--<RowDefinition Height="25"/>-->
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Command="{Binding ReturnToHomePage}" HorizontalAlignment="Left" Margin="-5 0 0 0" Background="Transparent" BorderBrush="Transparent">
+                <materialDesign:PackIcon Kind="ArrowBack" Foreground="#FF3580BF" Height="25" Width="25"/>
+            </Button>
+            <!--<Button Grid.Column="1"  Margin="0 0 30 0" HorizontalAlignment="Right" Command="{Binding OpenCreateGroup}" FontSize="12" BorderBrush="#FF3580BF" Background="#FF3580BF" Foreground="White"  Content="+ Créer un groupe"/>-->
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Column="0" x:Name="GameMode" Margin="15 0 0 0" FontSize="16" TextAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" x:Name="GameLevel" Margin="15 0 0 0" FontSize="16" TextAlignment="Left" VerticalAlignment="Center"/>
+            <!--<TextBlock Grid.Column="2" x:Name="d" Margin="15 0 0 0" FontSize="16" TextAlignment="Left"/>-->
+            <Button Grid.Column="2"  Margin="0 0 30 0" HorizontalAlignment="Right" Command="{Binding OpenCreateGroup}" FontSize="12" BorderBrush="#FF3580BF" Background="#FF3580BF" Foreground="White"  Content="+ Créer un groupe"/>
+
+
+        </Grid>        
+        <!--<Grid Grid.Row="2">
+            <TextBlock x:Name="GameLevel" Margin="15 0 0 0" FontSize="16" TextAlignment="Left"/>
+        </Grid>-->
+        
+        <Grid Grid.Row="3" Margin="0">
+            <ScrollViewer x:Name="ScrollView" HorizontalScrollBarVisibility="Auto" Grid.ColumnSpan="2">
+                <StackPanel x:Name="stakGroups" VerticalAlignment="Top" Margin="0">
+                    <!--<local:UserControl_Group Margin="15 0 15 15"/>
+                    <local:UserControl_Group Margin="15 0 15 15"/>
+                    <local:UserControl_Group Margin="15 0 15 15"/>
+                    <local:UserControl_Group Margin="15 0 15 15"/>
+                    <local:UserControl_Group Margin="15 0 15 15"/>-->
+                </StackPanel>
+
+            </ScrollViewer>
+        </Grid>
+
+
+
+    </Grid>
+</UserControl>
