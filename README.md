@@ -7,7 +7,7 @@ LOG3900 -- Team #6
 
 ## Description
 
-Cross-platform (multiplayer) competitive drawing game for Windows and Android using C# (WPF), Kotlin, NodeJS, MongoDB and more.
+Cross-platform (multiplayer) drawing and guessing game for Windows and Android using C# (WPF), Kotlin, NodeJS, MongoDB and more.
 
 The game consists of guessing what the other player draw. Can be played in teams or alone versus a bot.
 
