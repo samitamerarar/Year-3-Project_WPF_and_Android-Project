@@ -9,6 +9,8 @@ LOG3900 -- Team #6
 
 Cross-platform (multiplayer) competitive drawing game for Windows and Android using C# (WPF), Kotlin, NodeJS, MongoDB and more.
 
+The game consists of guessing what the other player draw. Can be played in teams or alone versus a bot.
+
 ## Authors
 
 Sami Tamer Arar,
